@@ -37,6 +37,20 @@ Wildcards
 
 Nos permite encontrar patrones o realizar busquedas mas avanzadas con el comando (ls) agregando caracteres especiales dentro de la shell 
 
+(ls *.[extension]) lista los elementos que terminen con la misma extension como "doc.html, text.html"
+(ls [nombre]*) lista los elementos con el nombre que compartan al principio y los caracteres posteriormente "datos1, datos123"
+(ls [nombre]?) lista los elementos con el nombre que compartan al principio y solo un caracter "datos1" {PUNTO IMPORTANTE ES QUE EL SIGNO DE INTERRAGION SUELE MEDIR LOS CARACTERES QUE BUSCAS}
+(ls -d [[:upper:]]*) Lista los elementos de mayusculas
+(ls -d [[:lower:]]*) Lista los elementos de minusculas
+(ls [iniciales de las letras que queremos que busque]*)
+
+
+Redirecciona cómo funciona la shell
+
+Todo empieza desde el teclado (STDN) que vendria a ser el teclado y al usar un comando antes que te envie el resultado que se necesita esto tiene 2 opciones (STOUT) que muestra los resultados o (STDERR) que muestra si hubo un error posteriormente lo imprime el la pantalla "DENTRO DE TODO ESTO EL STOUT TIENE EL CODIGO 1, Y EL STDERR TIENE EL CODIGO 2 (FILE DESCRIPTION)" 
+
+Para redirigir un archivo esta es la manera "ls [carpeta] > [misarchivos.txt]" posteriormente verlo con "less [archivo]"  
+Pero para visualizar el error necesitamos escribir lo siguiente (ls [cualquier cosa] 2> error.txt) de esta manera visualziando con el comando (head error.txt), imprimira el error
 
 
 
